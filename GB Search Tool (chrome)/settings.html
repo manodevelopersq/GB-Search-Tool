@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+
+    <style>
+        body {
+            background-color: #1f2830;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            color: white;
+        }
+        h1 {
+            color: white;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            color: white;
+            font-size: 1.2em;
+            margin-top: 20px;
+            display: block;
+        }
+        textarea {
+            resize: none;
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 10px;
+            padding-left: 0px;
+            padding-right: 0px;
+            background-color: rgb(35, 40, 50);
+            color: white;
+            border: 1px solid rgb(90, 100, 120);
+            border-radius: 5px;
+            font-size: 1em;
+            line-height: 1.4em;
+
+        }
+        p {
+            color: rgb(141, 141, 141);
+            font-size: 1em;
+            margin-bottom: 20px;
+        }
+        #save {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1em;
+            color: white;
+            background-color: #3b82f6;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        #save:hover {
+            background-color: #2563eb;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>GB Search Tool</h1>
+
+    <p>To edit the list, enter the name of the user or the word you want to block in their respective areas. It must be written exactly as it is on the website. Each line represents an element, so break the line for each term and then save.</p>
+
+    <label for="blocked-users">Blocked Users</label>
+    <textarea spellcheck="false" name="blocked-users" id="blocked-users" rows="10" cols="50"></textarea>
+
+    <p>If you just put the word you want to block, it will block any variation, for example "program" will block "programmer" too, if you want to block an exact word, put "[EXACT]" before the word you want to block, like "[EXACT]program", that way, the word "programmer" will not be blocked</p>
+
+    <label for="blocked-words">Blocked Words</label>
+    <textarea spellcheck="false" name="blocked-words" id="blocked-words" rows="10" cols="50"></textarea>
+    <br>
+    <button id="save">Save</button>
+
+    <script src="settings.js"></script>
+
+</body>
+</html>

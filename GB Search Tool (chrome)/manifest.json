@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "GB search tools",
+  "version": "1.0",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "description": "adds new functions to search on gamebanana.",
+  
+  "action": {
+    "default_popup": "popup.html"
+  },
+
+  "icons": {
+    "28": "Banana.png"
+  },
+  
+  "content_scripts": [
+    {
+      "matches": ["*://*.gamebanana.com/*"],
+      "js": ["script.js"]
+    }
+  ]
+}

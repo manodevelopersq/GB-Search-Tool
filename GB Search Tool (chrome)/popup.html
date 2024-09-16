@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            min-width: 220px;
+            max-width: 300px;
+            height: auto;
+            font-family: Arial, sans-serif;
+            background-color: #1f2830;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            font-size: 1.4em;
+            margin-bottom: 20px;
+        }
+
+        .input-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            flex: 1;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            background-color: #2d3b45;
+            color: white;
+            box-sizing: border-box;
+            margin-right: 5px; /* Espaço entre o input e o botão */
+        }
+
+        button {
+            padding: 10px;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            box-sizing: border-box;
+        }
+
+        #add-user, #add-word {
+            width: 30px;
+            height: 30px;
+            background-color: #3b82f6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #add-user:hover, #add-word:hover {
+            background-color: #2563eb;
+        }
+
+        #open-page, #toggle {
+            width: 100%;
+            margin-top: 10px;
+            background-color: #3b82f6;
+        }
+
+        #open-page:hover, #toggle:hover {
+            background-color: #2563eb;
+        }
+    </style>
+</head>
+<body>
+    <h1>GB Search Tool</h1>
+    <div class="input-container">
+        <input type="text" id="user-input" placeholder="User to block">
+        <button id="add-user">+</button>
+    </div>
+    <div class="input-container">
+        <input type="text" id="word-input" placeholder="Word to block">
+        <button id="add-word">+</button>
+    </div>
+    <button id="open-page">Open Settings</button>
+    <button id="toggle">Loading...</button>
+
+    <script src="popup.js"></script>
+</body>
+</html>
